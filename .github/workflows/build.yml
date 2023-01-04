@@ -36,6 +36,13 @@ jobs:
         run: ./build.sh
       - name: Build hb-subset.wasm
         run: ./build-subset.sh
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: wasm-files
+          path: |
+            hb.wasm
+            hb-subset.wasm
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
