@@ -17,5 +17,7 @@ em++ \
 	--no-entry \
 	-s EXPORTED_FUNCTIONS=@hbjs.symbols \
 	-s INITIAL_MEMORY=65MB \
+	-s MAXIMUM_MEMORY=256MB \
+	-s ALLOW_MEMORY_GROWTH=1 \
 	-o hb.wasm \
 	hbjs.cc
